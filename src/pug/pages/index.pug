@@ -1,0 +1,44 @@
+extends ../layout/base
+
+block content
+
+	section.main-img
+		
+		.container
+			.box
+					.box__left
+						p.box__title Ближайщий старт
+						p.box__text-bg 23.10.2000
+
+					.box__center
+
+					.box__right
+						p.box__title Участвовало
+						p.box__text-bg 130
+						p.box__text бойцов
+			.main-img__content
+
+	section.program#program
+		.container
+			+section-title('В программе лагеря')
+			include ../includes/modules/program
+
+	section.review#review
+		.container
+			+section-title('Отзывы участников')
+			include ../includes/modules/review
+
+	section.gallery#gallery
+		.container
+			+section-title('Галерея')
+			include ../includes/modules/gallery
+
+	section.form#form
+		.container
+			+section-title("Заявка на участие")
+			include ../includes/modules/form
+
+
+
+
+
