@@ -1,4 +1,7 @@
-@import "utils/vars";
+// @import "utils/vars";
+$a-color: #364037;
+$b-color: #976c42;
+$c-color: #f3dec8;
 
 .brands-list {
 	&__inner {
@@ -11,13 +14,11 @@
 	}
 }
 
-
 .brand-card-wrap {
 	padding      : 0px 12px;
 	width        : 25%;
 	margin-bottom: 36px;
 	
-
 	@media (max-width: $lg - 1) {
 		width: 33.33%;
 	}
@@ -34,7 +35,7 @@
 .brand-card {
 	height         : 382px;
 	border-radius  : 2px;
-	border         : 1px solid #E4E4E4;
+	border         : 1px solid $a-color;
 	display        : flex;
 	align-items    : center;
 	justify-content: center;
@@ -77,7 +78,7 @@
 		display        : flex;
 		align-items    : center;
 		justify-content: center;
-		padding        : 20px;
+		padding        : 5px;
 
 		img {
 			max-width : 100%;
@@ -92,7 +93,7 @@
 		bottom          : 0;
 		left            : 0;
 		padding         : 54px 25px;
-		background-color: #fff;
+		background-color: $a-color;
 		transform       : translateY(100%);
 		transition      : all .3s ease;
 
@@ -104,7 +105,6 @@
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 25%,rgba(255,255,255,1)  75%);
 		}
 
 		@media (max-width: $xl - 1) {
@@ -124,9 +124,11 @@
 		font-size    : 24px;
 		font-weight  : 600;
 		margin-bottom: 30px;
+		color: #fff;
 	}
 
 	&__descr {
 		font-size: 14px;
+		color: #fff;
 	}
 }

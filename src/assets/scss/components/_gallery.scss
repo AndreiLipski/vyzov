@@ -17,8 +17,8 @@ $c-color: #f3dec8;
 	width: 25%;
 	height: 20vw;
 	@media(max-width: $xl - 1) {
-		width: 33.33%;
-		height: 40vh;
+		// width: 33.33%;
+		// height: 40vh;
 	}
 	@media(max-width: $lg - 1) {
 		width: 50%;
@@ -50,7 +50,7 @@ $c-color: #f3dec8;
 	width: 100%;
 	text-align: center;
 	background-color: $b-color;
-	color: #fff;
+	color: rgb(255, 255, 255);
 	font-weight: 600;
 }
 
