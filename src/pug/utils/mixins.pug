@@ -9,8 +9,8 @@ mixin section-title(title)
 
 mixin gallery-card(args={})
 	.box-img 
-		a(data-fancybox="gallery" href=args.img)
-			img.rounded(src=args.img alt="foto")
+		a(data-fancybox="gallery" href=args.img loading="lazy")
+			img.rounded(src=args.img alt="foto" loading="lazy")
 
 mixin brand-card(args={})
 	.brand-card-wrap

@@ -1,5 +1,5 @@
-@import 'utils/vars';
-@import 'components/burger';
+// @import 'utils/vars';
+// @import 'components/burger';
 
 $a-color: #364037;
 $b-color: #976c42;
@@ -19,28 +19,11 @@ $c-color: #f3dec8;
 		align-items: center;
 		padding-top: 20px;
 		padding-bottom: 20px;
+		@media(max-width: $lg - 1) {
+			flex-wrap: wrap;
+		}
 		@media(max-width: $sm - 1) {
 			padding: 10px 0;
-		
-		}
-
-		&__title{
-			color:#fff ;
-			font-size: 3rem;
-			letter-spacing: 40px;
-			@media(max-width: $xl - 1) {
-				
-			}
-			@media(max-width: $lg - 1) {
-				
-			}
-			@media(max-width: $md - 1) {
-				letter-spacing: 20px;
-				padding-left: 20px;
-			}
-			@media(max-width: $sm - 1) {
-				font-size: 2rem;
-			}
 		}
 
 		&__left {
@@ -75,7 +58,7 @@ $c-color: #f3dec8;
 			max-width: 200px;
 			display: flex;
 			@media(max-width: $sm - 70) {
-				display: none;
+
 			}
 			img {
 				width: 100%;
@@ -91,29 +74,34 @@ $c-color: #f3dec8;
 	}
 	&-nav {
 		position: relative;
-		height: 40px;
 		align-items: center;
+		width: 60%;
 		@media(max-width: $xl - 1) {
 			font-size: 16px;
+		}
+		@media(max-width: $lg - 1) {
+			order: 3;
+			width: 100%;
+			padding-top: 20px;
 		}
 		@media(max-width: $md - 1) {
 			font-size: 14px;
 		}
 		@media(max-width: $sm - 1) {
-			margin: 0 -10px;
-			height: 50px;
+			display: none;
 		}
 
 		&__list {
 			display: flex;
 			width: 100%;
-			justify-content: space-around;
+			justify-content: space-between;
 		}
 
 		&__li{
 			color: #fff;
 			font-size: 18px;
 			font-weight: 600;
+
 			&:hover{
 				color:$c-color;
 				transition: 0.5s;
@@ -123,18 +111,7 @@ $c-color: #f3dec8;
 	}
 }
 
-.header-logo-g {
-	display: none;
-	width: 100%;
-	height: 50px;
-	&__logo{
-		width: 100%;
-		height: 100%;
-	}
-	@media(max-width: $sm - 70) {
-		display: block;
-	}
-}
+
 .box-phone{
 	color: #fff;
 	font-size:larger;
@@ -153,6 +130,25 @@ $c-color: #f3dec8;
 		&:hover{
 			transition: 0.5s;
 			color: $c-color;
+		}
+	}
+}
+
+.box-social {
+	&__list{
+		display: flex;
+		justify-self: space-between;
+	}
+	&__li{
+		margin-right: 16px;
+
+		@media(max-width: $md - 1) {
+		}
+		@media(max-width: $sm - 1) {
+			display: none;
+		}
+		&:last-child{
+			margin-right: 0;
 		}
 	}
 }
