@@ -121,14 +121,15 @@ $c-color: #f3dec8;
 	}
 
 	&__title {
-		font-size    : 24px;
-		font-weight  : 600;
-		margin-bottom: 30px;
+		font-size    : 18px;
+
+		margin-bottom: 16px;
 		color: #fff;
 	}
 
 	&__descr {
-		font-size: 14px;
+		font-size: 13px;
+		font-family: Arial, Helvetica, sans-serif;
 		color: #fff;
 	}
 }
