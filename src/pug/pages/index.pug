@@ -2,42 +2,45 @@ extends ../layout/base
 
 block content
 
-	section.main-img
-		.container
-			.title-text 
-				p.title-text__title ВЫЗОВ
-				p.title-text__title-sm военно-патриотический лагерь
-			.box
-				.box__left
-					p.box__title Ближайщий <br> старт
-					p.box__text-bg 23.10.2000
+    section.main-img
+        .main-bg
 
-				.box__center
-					img(src="assets/img/img-1.jpg", alt="")
-				.box__right
-					p.box__title Участвовало
-					p.box__text-bg 130
-					p.box__text бойцов
-			
-	section.program#program
-		.container
-			+section-title('В программе лагеря')
-			include ../includes/modules/program
+        .title-text
+            p.title-text__title ВЫЗОВ
+            p.title-text__title-sm военно-патриотический проект
+            a(href="#form").btn.btn--primary.scrollto Стать участником
+            //.box
+            //	.box__left
+            //		p.box__title Ближайщий <br> старт
+            //		p.box__text-bg 23.10.2000
+            //
+            //	.box__center
+            //
+            //	.box__right
+            //		p.box__title Участвовало
+            //		p.box__text-bg 130
+            //		p.box__text бойцов
 
-	section.review#review
-		.container
-			+section-title('Отзывы участников')
-			include ../includes/modules/review
+    section.section-margin.program#program
+        .main-bg
+        .container
+            +section-title('В программе лагеря')
+            include ../includes/modules/program
 
-	section.gallery#gallery
-		.container
-			+section-title('Галерея')
-			include ../includes/modules/gallery
+    section.section-margin.review#review
+        .container
+            +section-title('Отзывы участников')
+            include ../includes/modules/review
 
-	section.form#form
-		.container
-			+section-title("Заявка на участие")
-			include ../includes/modules/form
+    section.section-margin.gallery#gallery
+        .container
+            +section-title('Галерея')
+            include ../includes/modules/gallery
+
+    section.form#form
+        .container
+            +section-title("Заявка на участие")
+            include ../includes/modules/form
 
 
 

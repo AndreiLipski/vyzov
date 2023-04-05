@@ -2,7 +2,7 @@
 	.wrapper-img 
 		- for (var i = 1; i <= 12; i++)
 			+gallery-card({
-				img: `assets/img/gallery/img-${i}.jpg`
+				img: `/assets/img/gallery/img-${i}.jpg`
 			})
 		dl
 			dt.question.js-accordion
@@ -13,5 +13,5 @@
 							.wrapper-img
 								- for (var i = 13; i <= 40; i++)
 									+gallery-card({
-										img: `assets/img/gallery/img-${i}.jpg`
+										img: `/assets/img/gallery/img-${i}.jpg`
 									})

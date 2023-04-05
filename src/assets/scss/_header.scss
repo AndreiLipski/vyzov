@@ -1,7 +1,7 @@
 // @import 'utils/vars';
 // @import 'components/burger';
 
-$a-color: #364037;
+$a-color: rgba(0, 0, 0, 0.65);
 $b-color: #976c42;
 $c-color: #f3dec8;
 
@@ -11,7 +11,8 @@ $c-color: #f3dec8;
 	left: 0;
 	right: 0;
 	z-index: 100;
-	background-color: $a-color;
+	background: linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,0) 100%);
+
 
 	&-top {
 		display: flex;
