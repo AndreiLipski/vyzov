@@ -1,7 +1,8 @@
 function findElements(object, element) {
 	const instance = object;
 	instance.element = element;
-	instance.target = element.nextElementSibling;
+    console.log(element)
+	instance.target = element.previousElementSibling;
 }
 
 function hideElement(object) {
@@ -34,6 +35,12 @@ function measureHeight(object) {
 function subscribe(instance) {
 	instance.element.addEventListener('click', (event) => {
 		event.preventDefault();
+        event.target.classList.toggle('active')
+        if(event.target.classList.contains('active')){
+            event.target.innerHTML = 'Свернуть'
+        }else{
+            event.target.innerHTML = 'Показать еще'
+        }
 		changeElementStatus(instance);
 	});
 	window.addEventListener('resize', () => measureHeight(instance));

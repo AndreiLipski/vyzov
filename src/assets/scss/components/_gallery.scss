@@ -3,7 +3,10 @@ $b-color: #976c42;
 $c-color: #f3dec8;
 
 .gallery {
-
+	dl{
+		width: calc(100% - 12px);
+		margin: 0 auto;
+	}
 }
 
 .wrapper-img{
@@ -42,7 +45,7 @@ $c-color: #f3dec8;
 }
 
 .question {
-	margin: 6px;
+	margin: 20px auto;
 
 }
 

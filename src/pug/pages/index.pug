@@ -7,27 +7,25 @@ block content
 
         .title-text
             p.title-text__title ВЫЗОВ
-            p.title-text__title-sm военно-патриотический проект
+            p.title-text__title-sm военно-патриотический проект совместно с Министерством обороны
             a(href="#form").btn.btn--primary.scrollto Стать участником
-            //.box
-            //	.box__left
-            //		p.box__title Ближайщий <br> старт
-            //		p.box__text-bg 23.10.2000
-            //
-            //	.box__center
-            //
-            //	.box__right
-            //		p.box__title Участвовало
-            //		p.box__text-bg 130
-            //		p.box__text бойцов
+        .box
+            .box__left
+                p.box__title Ближайший старт
+                p.box__text-bg 23.10.2000
+            .box__right
+                p.box__title Учавствовало
+                p.box__text-bg 130
+
 
     section.section-margin.program#program
-        .main-bg
+
         .container
             +section-title('В программе лагеря')
             include ../includes/modules/program
 
     section.section-margin.review#review
+        .main-bg.main-bg--right
         .container
             +section-title('Отзывы участников')
             include ../includes/modules/review

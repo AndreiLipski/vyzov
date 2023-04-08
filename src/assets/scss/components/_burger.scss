@@ -1,3 +1,5 @@
+@import 'utils/vars';
+
 .hamburger{
 	display: none;
 	@media(max-width: $sm - 1) {
@@ -14,7 +16,7 @@
 			background: #fff;
 			display: block;
 			margin-bottom: 4px;
-			transition: 1s all;
+			transition: .3s all;
 			&:last-child{
 				margin-bottom: 0;
 				}
@@ -42,17 +44,19 @@
 	@media(max-width: $sm - 1) {
 		display: block;
 		position: fixed;
-		top: -100%;
+		transform: translateY(-100%);
+		top: 0;
 		right: 0;
 		width: 100%;
 		z-index: 20;
-		transition: 0.8s all;
-		height: 100%;
+		transition: 0.3s all;
+		//height: 100%;
 		&__list{
+			padding: 40px 0;
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: flex-start;
-			background-color: $a-color;
+			background-color: $bg-main;
 
 		}
 		&__list-item{
@@ -63,8 +67,7 @@
 	}
 }
 .nav-menu_active{
-	display: block;
-	top: 0%;
+	transform: translateY(0);
 }
 .a{
 	color: #ffff;

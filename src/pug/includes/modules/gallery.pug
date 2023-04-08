@@ -1,17 +1,17 @@
 .gallery
-	.wrapper-img 
-		- for (var i = 1; i <= 12; i++)
-			+gallery-card({
-				img: `/assets/img/gallery/img-${i}.jpg`
-			})
-		dl
-			dt.question.js-accordion
-				button.question__trigger(type="button") больше фото
-			dd.answer
-					div
-						.gallery
-							.wrapper-img
-								- for (var i = 13; i <= 40; i++)
-									+gallery-card({
-										img: `/assets/img/gallery/img-${i}.jpg`
-									})
+    .wrapper-img
+        - for (var i = 1; i <= 12; i++)
+            +gallery-card({
+                img: `/assets/img/gallery/img-${i}.jpg`
+            })
+        dl
+            dd.answer
+                div
+                    .gallery
+                        .wrapper-img
+                            - for (var i = 13; i <= 40; i++)
+                                +gallery-card({
+                                    img: `/assets/img/gallery/img-${i}.jpg`
+                                })
+            dt.question.js-accordion
+                .btn.btn--primary.question__trigger(type="button") Показать еще

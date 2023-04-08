@@ -3,6 +3,14 @@ $a-color: rgba(54, 64, 55, 0.48);
 $b-color: #976c42;
 $c-color: #f3dec8;
 
+
+.review{
+	background-image: url('/assets/img/img-16.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom center;
+}
+
 .brands-list {
 	&__inner {
 		display  : flex;
