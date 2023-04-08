@@ -7,9 +7,27 @@
                     label Имя
                     input(type="text" placeholder="Ваше имя").form-control
                 .form-item
+                    label Фамилия
+                    input(type="text" placeholder="Ваша фамилия").form-control
+                .form-item
                     label Телефон
-                    input(type="text" placeholder="Ваше имя").form-control
+                    input(type="tel" placeholder="Номер телефона").form-control
             .form-inner__right
                 .form-item
                     label Задайте нам вопрос
-                    textarea(type="text" placeholder="Ваше имя")
+                    textarea(type="text" placeholder="Напишите нам, что Вас интересует").form-control.form-control--textarea
+                .form-item
+                    .checkbox
+
+                        input(class="form-control" type='checkbox', id= 'ID' + id, name= 'NAME' + id, value='active' data-bv-notempty-message="Заполните поле" required)&attributes(
+                            attributes)
+                        label(for= 'ID' + id)
+
+                                //span.checkbox__descr я согласен на обработку
+                                //    a(href='#')(class="btn btn--text-icon")
+                                //        span моих персональных данных
+                                //
+                        .checkbox__descr Согласен на обработку <a href="#"> <span> персональных данныx </span> </a>
+
+
+        button.btn.btn--primary Отправить

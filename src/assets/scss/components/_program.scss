@@ -7,16 +7,24 @@ $c-color: #f3dec8;
 		display: grid;
 		grid-template-columns: 250px auto;
 		gap: 40px;
+		align-items: start;
 		@media (max-width: $sm - 1) {
 			gap: 24px;
 			grid-template-columns: 160px auto;
 		}
 	}
+	&__tabs-wrap{
+
+	}
 	&__tabs{
+
 		display: flex;
 		flex-direction: column;
-		position: relative;
+		justify-content: flex-start;
+		position: sticky;
+		top: 80px;
 		z-index: 2;
+
 		//overflow: auto;
 	}
 	&__tab {
@@ -77,6 +85,9 @@ $c-color: #f3dec8;
 				}
 			}
 		}
+	}
+	&__content{
+
 	}
 	
 	&__tab-content {

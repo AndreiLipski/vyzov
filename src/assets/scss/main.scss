@@ -97,7 +97,9 @@ section {
 		}
 	}
 }
-
+.bg-2{
+	background-color: #252525;
+}
 .btn{
 	display: inline-flex;
 	align-items: center;
@@ -116,6 +118,7 @@ section {
 	background-color: #000;
 	color: #fff;
 	transition: all 0.3s;
+	cursor: pointer;
 	@media (max-width: $sm - 1) {
 		height: 36px;
 		font-size: 14px;
@@ -123,8 +126,9 @@ section {
 	}
 	&--primary{
 		background-color: #D95103;
+		background-color: $c-primary-2;
 		&:hover{
-			background-color: #f37832;
+			background-color: $c-primary-hover;
 		}
 	}
 }
@@ -181,6 +185,7 @@ section {
 	position: relative;
 	z-index: 2;
 	margin-left: 10vw;
+	margin-right: 5vw;
 	max-width: 800px;
 	&__title{
 		color: #e0e0e0;
@@ -205,7 +210,7 @@ section {
 	&__title-sm{
 		color: #fff;
 		font-size: 32px;
-		font-weight: 700;
+		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		//text-align: center;
@@ -216,6 +221,9 @@ section {
 	}
 	.btn{
 		margin-top: 40px;
+		@media (max-width: $xs - 1) {
+			margin-top: 32px;
+		}
 	}
 }
 
@@ -231,7 +239,7 @@ section {
 	align-items: center;
 	background-color: $a-color;
 	backdrop-filter: blur(5px);
-	margin: 0 auto;
+	margin: 40px auto 0;
 	color: $c-color;
 	border-radius: 10px;
 

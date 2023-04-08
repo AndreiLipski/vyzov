@@ -1,7 +1,6 @@
 function findElements(object, element) {
 	const instance = object;
 	instance.element = element;
-    console.log(element)
 	instance.target = element.previousElementSibling;
 }
 
