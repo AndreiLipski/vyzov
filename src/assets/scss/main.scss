@@ -43,6 +43,9 @@ body {
 	font-weight: 400;
 	color: $c-text;
 	background-color: $bg-main;
+	&.overflow{
+		overflow: hidden;
+	}
 	@media(max-width: $md - 1) {
 		font-size: 14px;
 	}
@@ -88,7 +91,7 @@ section {
 	h2 {
 		display: inline-block;
 		font-size: 36px;
-		color: $b-color;
+		color: $c-primary-hover;
 		font-weight: 700;
 		text-transform: uppercase;
 		//text-decoration: underline;
@@ -255,7 +258,17 @@ section {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
-		@media(max-width: $sm - 1) {
+		position: relative;
+		@media(max-width: $xs - 1) {
+			&:after{
+				content: '';
+				position: absolute;
+				top: calc(100% + 8px);
+				left: 20%;
+				right: 20%;
+				height: 1px;
+				background-color: rgba(129, 138, 129, 0.5);
+			}
 		}
 	}
 

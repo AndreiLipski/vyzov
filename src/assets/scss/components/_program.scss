@@ -12,6 +12,9 @@ $c-color: #f3dec8;
 			gap: 24px;
 			grid-template-columns: 160px auto;
 		}
+		@media (max-width: $xs - 1) {
+			grid-template-columns: 1fr;
+		}
 	}
 	&__tabs-wrap{
 
@@ -24,6 +27,16 @@ $c-color: #f3dec8;
 		position: sticky;
 		top: 80px;
 		z-index: 2;
+		@media (max-width: $xs - 1) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 4px 8px;
+			margin: 0 -10px;
+			background: rgba(93, 92, 92, 0.49);
+			backdrop-filter: blur(5px);
+			padding: 8px;
+			border-radius: 8px;
+		}
 
 		//overflow: auto;
 	}
@@ -52,7 +65,8 @@ $c-color: #f3dec8;
 
 		&.active {
 			pointer-events: none;
-			color         : $b-color;
+			color         : $c-primary-2;
+			//color         : $b-color;
 
 			&:after {
 				bottom: 0;
@@ -67,7 +81,7 @@ $c-color: #f3dec8;
 			top: 0;
 			bottom          : 100%;
 			width          : 3px;
-			background-color: $b-color;
+			background-color: $c-primary-2;
 			transition      : all .3s ease;
 			@media (max-width: $sm - 1) {
 				width: 2px;

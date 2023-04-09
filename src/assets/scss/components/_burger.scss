@@ -6,7 +6,7 @@
 		display: block;
 		width: 30px;
 		position: fixed;
-		top: 17px;
+		top: 23px;
 		right: 30px;
 		height: 14px;
 		z-index: 31;
@@ -48,21 +48,36 @@
 		top: 0;
 		right: 0;
 		width: 100%;
+
 		z-index: 20;
 		transition: 0.3s all;
 		//height: 100%;
 		&__list{
 			padding: 40px 0;
+			height: 100vh;
+			display: flex;
 			flex-direction: column;
-			align-items: flex-start;
-			justify-content: flex-start;
+			align-items: center;
+			justify-content: center;
 			background-color: $bg-main;
 
 		}
 		&__list-item{
 			margin-right: 0;
-			font-size: 20px;
-			padding: 10px 0;
+			font-size: 28px;
+			padding: 12px 0;
+			font-weight: 700;
+			color: $c-color;
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+			&:last-child{
+				margin-top: 20px;
+				padding-top: 26px;
+				width: 50%;
+				border-top: 1px solid #444444;
+			}
+
 		}
 	}
 }
@@ -75,12 +90,17 @@
 .box-burger {
 	display: flex;
 	justify-content: center;
+	width: 100%;
 	&__list{
 		display: flex;
 		
 	}
 	&__li{
 		margin-right: 32px;
+		fill: $c-primary-2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		@media(max-width: $sm - 1) {
 		}
 		&:last-child{

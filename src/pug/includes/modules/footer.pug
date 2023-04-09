@@ -1,11 +1,37 @@
 footer.footer
     .container
-        .footer-wrapper
-            .footer-left
+        .footer-top
+            .footer-top__logo
                 | ЛОГОТИП
                 //img.logo(src="../../assets/img/logo-g.svg", alt="")
-            .footer-mid
+            .footer-top__menu
+                ul.header-nav__list
+                    li
+                        a.header-nav__li.scrollto(href="#program") Программа
+                    li
+                        a.header-nav__li.scrollto(href="#review") Отзывы
+                    li
+                        a.header-nav__li.scrollto(href="#gallery") Галерея
+                    li
+                        a.header-nav__li.scrollto(href="#form") Участие
 
-            .footer-right#contact
-                p.footer-right__phone
-                    a(href="tel:+375291171100") +375 (29) 117-11-00
+            .footer-top__social
+                .box-burger
+                    ul.box-burger__list
+                        li.box-burger__li
+                            a(href="https://instagram.com/bratsouz_vyzov/" target="_blank")
+                                +icon('i-inst')(style="width:28px;height:28px")
+                        li.box-burger__li
+                            a(href="https://t.me/avtoprobegi_zaedinuybelarus" target="_blank")
+                                +icon('i-tg')(style="width:32px;height:32px")
+
+                        li.box-burger__li
+                            a(href="mailto:vplVyzov@yandex.by")
+                                +icon('i-mail')(style="width:26px;height:26px")
+
+        .footer-bottom
+            .footer-bottom__copy
+                | 2023 Все права защищены
+            .footer-bottom__politics
+                a(href="#" target="_blank") Политика конфиденциальности
+

@@ -12,6 +12,7 @@ html(lang='ru')
         title #{title}
         meta(name="description", content=description)
         block styles
+        <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
     body(class=pageClass)
         include ../includes/modules/header
@@ -24,4 +25,5 @@ html(lang='ru')
         |   crossorigin="anonymous"></script>
 
     block script
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>

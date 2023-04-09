@@ -29,7 +29,7 @@ $c-color: #f3dec8;
 
 		}
 		@media(max-width: $sm - 1) {
-			padding: 10px 0;
+			//padding: 10px 0;
 		}
 
 		&__left {
@@ -81,17 +81,13 @@ $c-color: #f3dec8;
 	&-nav {
 		position: relative;
 		align-items: center;
-		width: 60%;
-		font-style: normal;
-		font-weight: 300;
-		@media(max-width: $xl - 1) {
-			font-size: 16px;
-		}
-		@media(max-width: $lg - 1) {
-			font-size: 13px;
-		}
-		@media(max-width: $md - 1) {
-			
+		//width: 60%;
+		//font-style: normal;
+		//font-weight: 300;
+		margin-left: auto;
+		margin-right: 10vw;
+		@media (max-width: $lg - 1) {
+			margin-right: 5vw;
 		}
 		@media(max-width: $sm - 1) {
 			display: none;
@@ -99,16 +95,35 @@ $c-color: #f3dec8;
 
 		&__list {
 			display: flex;
-			width: 100%;
-			justify-content: space-around;
+			gap: 2vw;
 		}
 
 		&__li{
 			color: #fff;
+			font-weight: 600;
+			font-size: 20px;
+			text-transform: uppercase;
+			position: relative;
+			@media (max-width: $lg - 1) {
+				font-size: 18px;
+			}
+			&:before{
+				position: absolute;
+				content: '';
+				top: 100%;
+				left: 0;
+				right: 100%;
+				height: 2px;
+				background: $c-color;
+				transition: all ease .3s;
+			}
 
 			&:hover{
 				color:$c-color;
-				transition: 0.5s;
+				transition: 0.3s;
+				&:before{
+					right: 0;
+				}
 			}
 		}
 
@@ -118,10 +133,21 @@ $c-color: #f3dec8;
 .box-social {
 	&__list{
 		display: flex;
-		justify-self: space-between;
+		align-items: center;
 	}
 	&__li{
 		margin-right: 16px;
+
+		a{
+			fill: $c-color;
+			transition: all ease .3s;
+			@media (min-width: $md){
+				cursor: pointer;
+				&:hover{
+					fill: $c-primary-2;
+				}
+			}
+		}
 
 		@media(max-width: $md - 1) {
 		}

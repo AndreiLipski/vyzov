@@ -1,4 +1,8 @@
 extends ../layout/base
+block variables
+    - var title = 'Военно-патриотический проект "ВЫЗОВ"'
+    - var description = 'Военно-патриотический проект "ВЫЗОВ"'
+    - var pageClass = ''
 
 block content
 
@@ -35,7 +39,7 @@ block content
             +section-title('Галерея')
             include ../includes/modules/gallery
 
-    section.form#form
+    section.section-margin.form#form
         .container
             +section-title("Заявка на участие")
             include ../includes/modules/form

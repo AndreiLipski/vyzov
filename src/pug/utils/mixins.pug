@@ -20,8 +20,15 @@ mixin brand-card(args={})
     .brand-card-wrap
         .brand-card
             .brand-card__front
-                img(src=args.img, alt="")
+                .brand-card__name!=args.title
+                    span 18 лет
+
+                img(src='data:image/png;base64', alt=args.title data-splide-lazy=args.img)
             .brand-card__content
                 .brand-card__back
                     .brand-card__title!=args.title
                     .brand-card__descr!=args.descr
+
+mixin icon(imgName)
+    svg.icon()&attributes(attributes)
+        use(xlink:href="./assets/img/sprite.svg#" + imgName)
