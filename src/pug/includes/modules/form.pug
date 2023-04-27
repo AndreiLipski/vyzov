@@ -1,27 +1,27 @@
 .form-subtitle Желаете принять участие, но не знаете с чего начать?<br>Заполните форму ниже, мы свяжемся с Вами в самое ближайшее время.
 .form-wrapper
-    form
+    form(action="#" enctype="multipart/form-data" method="POST" onsubmit="send(event, 'send.php')")
         .form-inner
             .form-inner__left
                 .form-item
                     label Имя
-                    input(type="text" placeholder="Ваше имя").form-control
+                    input(type="text" required id="formName" name="name" placeholder="Ваше имя").form-control
                 .form-item
                     label Фамилия
-                    input(type="text" placeholder="Ваша фамилия").form-control
+                    input(type="text" required id="formSurname" name="surname" placeholder="Ваша фамилия").form-control
                 .form-item
                     label Телефон
-                    input(type="tel" placeholder="Номер телефона").form-control
+                    input(type="tel" required id="formPhone" name="phone" placeholder="Номер телефона").form-control._req._phone
             .form-inner__right
                 .form-item
                     label Задайте нам вопрос
-                    textarea(type="text" placeholder="Напишите нам, что Вас интересует").form-control.form-control--textarea
+                    textarea(required id="formText" name="text" placeholder="Напишите нам, что Вас интересует").form-control.form-control--textarea
                 .form-item
                     .checkbox
 
-                        input(class="form-control" type='checkbox', id= 'ID' + id, name= 'NAME' + id, value='active' data-bv-notempty-message="Заполните поле" required)&attributes(
+                        input(class="form-control" aria-required type='checkbox', id= 'policy', name= 'policy', value='active' data-bv-notempty-message="Заполните поле" required)&attributes(
                             attributes)
-                        label(for= 'ID' + id)
+                        label(for= 'policy')
 
                                 //span.checkbox__descr я согласен на обработку
                                 //    a(href='#')(class="btn btn--text-icon")

@@ -21,7 +21,7 @@ mixin brand-card(args={})
         .brand-card
             .brand-card__front
                 .brand-card__name!=args.title
-                    span 18 лет
+                    span=args.age
 
                 img(src='data:image/png;base64', alt=args.title data-splide-lazy=args.img)
             .brand-card__content

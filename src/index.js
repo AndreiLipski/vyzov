@@ -8,6 +8,7 @@ import './js/swiper.js';
 import './js/scrol.js';
 import './js/program.js';
 import './js/gallery-collapse.js';
+import './js/form.js';
 //
 // if (process.env.NODE_ENV !== `production`) {
 //   async function load() {
