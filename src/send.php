@@ -13,7 +13,6 @@ require 'class.HTTP.php';
 // Переменные, которые отправляет пользователь
 $title = 'Заявка с сайта a-studio.by';
 $name = htmlspecialchars(HTTP::_GP('name', "", true));
-$page = htmlspecialchars(HTTP::_GP('page', "", true));
 $phone = htmlspecialchars(HTTP::_GP('phone', ""));
 //$email = htmlspecialchars(HTTP::_GP('email', ""));
 // $name 	= htmlspecialchars ($_POST['name']);
@@ -24,7 +23,7 @@ $phone = htmlspecialchars(HTTP::_GP('phone', ""));
 
 // Формирование самого письма
 $body = "
-<h2>Новое письмо: ".$page."</h2>
+<h2>Новое письмо:</h2>
 <b>Имя:</b> $name<br>
 <b>Почта:</b> <br><br>
 <b>Номер телефона:</b><br>$phone
@@ -33,45 +32,32 @@ $body = "
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
-    $mail->isSMTP();   
+    $mail->isSMTP();
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
+//    $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'semenkurochkin@gmail.com'; // Логин на почте
-    $mail->Password   = 'H3ohF55U'; // Пароль на почте
+    $mail->Host       = 'ssl://smtp.yandex.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'idsemen1992@ya.ru'; // Логин на почте
+    $mail->Password   = 'bwvgthataexcfqkm'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-	$mail->SMTPKeepAlive = true;
-    $mail->setFrom('semenkurochkin@gmail.com', 'Сообщение от клиента'); // Адрес самой почты и имя отправителя
+    $mail->SMTPKeepAlive = true;
+    $mail->setFrom('idsemen1992@ya.ru', 'Сообщение от клиента'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('semenkurochkin@gmail.com');
+    $mail->addAddress('idsemen1992@ya.ru');
 
-    // Прикрипление файлов к письму
-if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-        $filename = $file['name'][$ct];
-        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-            $mail->addAttachment($uploadfile, $filename);
-            $rfile[] = "Файл $filename прикреплён";
-        } else {
-            $rfile[] = "Не удалось прикрепить файл $filename";
-        }
-    }   
-}
 // Отправка сообщения
-$mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = php_mail_html($body);    
+    $mail->isHTML(true);
+    $mail->Subject = $title;
+    $mail->Body = php_mail_html($body);
 
 // Проверяем отравленность сообщения
-if ($mail->send()) {$result = "success";} 
-else {$result = "error";}
+    if ($mail->send()) {$result = "success";}
+    else {$result = "error";}
 
 } catch (Exception $e) {
     $result = "error";
@@ -79,14 +65,13 @@ else {$result = "error";}
 }
 
 // Отображение результата
-$rfile = 'file';
 $status = 'status';
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+echo json_encode(["result" => $result, "status" => $status]);
 
 //-- Формируем HTML тело сообщения
 function php_mail_html($message)
-{	
-	$HTML = '
+{
+    $HTML = '
 		<!DOCTYPE html>
 		<html>
 		<head>
@@ -113,7 +98,7 @@ function php_mail_html($message)
 				</tr>
 				<tr>
 					<td align="center" style="padding-top: 20px; line-height: 17px; font-size: 12px; font-family: Arial, \'sans-serif\'; opacity: 0.4;">
-						&copy; A-STUDIO
+						&copy; ВЫЗОВ
 					</td>
 				</tr>
 			</table>
@@ -121,6 +106,6 @@ function php_mail_html($message)
 		</body>
 		</html>
 	';
-	
-	return($HTML);
+
+    return($HTML);
 }
